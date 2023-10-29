@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Tetris</title>
+  </head>
+  <body>
+    <audio src="./sound/rowclear.wav" id="rowclear"></audio>
+    <main class="container">
+      <div class="container__display">
+        <section class="container__game-info">
+          <div class="container__game-score">
+            <div>Score: <span id="score">0</span></div>
+            <i class="fa-solid fa-circle-info" id="info"></i>
+            
+          </div>
+          <button class="container__pause" id="startStop" value="pause">
+            <i class="fa-solid fa-pause" ></i>
+          </button>
+        </section>
+        <canvas id="display"></canvas>
+      </div>
+      <section class="container__buttons" id="buttons-container">
+        <button class="container__buttons-left buttons" value="left">
+          <i class="fa-solid fa-left-long"></i>
+        </button>
+        <button class="container__buttons-right buttons" value="right">
+          <i class="fa-solid fa-right-long"></i>
+        </button>
+        <button class="container__buttons-fast buttons" value="faster">
+          <i class="fa-solid fa-angles-down"></i>
+        </button>
+        <button class="container__buttons-rotate buttons" value="rotate">
+          <i class="fa-solid fa-rotate"></i>
+        </button>
+      </section>
+    </main>
+  </body>
+  <script src="./modules/gameInterface.js"></script>
+  <script type="module" src="main.js"></script>
+</html>
